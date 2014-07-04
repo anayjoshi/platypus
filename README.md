@@ -129,9 +129,7 @@ The result would look like
 [10]
 ```
 
-Platypus can also be used to return multiple values.
-
-Save the following function as `fibo_sum.platypus`
+Platypus can also be used to return multiple values. Save the following program as `fibo_sum.platypus`
 
     function (a1 a2 N) {
     # a1, a2 = first and second fibonacci numbers. 
@@ -171,3 +169,8 @@ Save the following function as `fibo_sum.platypus`
 platypus $ 1 1 8
 ```
 
+should output
+
+```
+[21, 54]
+```
