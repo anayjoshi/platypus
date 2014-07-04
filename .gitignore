@@ -1,0 +1,6 @@
+*.out
+*.pyc
+parsetab.py
+Platypus.egg-info/
+build/
+dist/
