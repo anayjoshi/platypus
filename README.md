@@ -129,4 +129,45 @@ The result would look like
 [10]
 ```
 
-Platypus can also be used to return multiple arguments (see *tests/examples/*)
+Platypus can also be used to return multiple values.
+
+Save the following function as `fibo_sum.platypus`
+
+    function (a1 a2 N) {
+    # a1, a2 = first and second fibonacci numbers. 
+    This function returns the Nth fibonacci number and 
+    the sum of the first N fibonacci numbers #
+
+        if (N==1) {
+            fibo = a1
+            sum = a1
+        }
+        else {
+            if (N==2) {
+                fibo = a2
+                sum = a1 + a2
+            }
+            else {
+            i = 3
+            sum = a1 + a2
+            anow = a2
+            aprev = a1
+                while (i<=N) {
+                    temp = anow
+                    anow = anow+aprev
+                    aprev = temp
+                    i = i+1
+                    sum = sum + anow
+                }
+                fibo = anow
+            }
+        }
+
+    return (fibo sum)
+    }
+
+            
+```
+platypus $ 1 1 8
+```
+
