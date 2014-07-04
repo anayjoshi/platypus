@@ -10,25 +10,45 @@ Platypus is a is *truely* minimal language. In its entirety, it consists of:
 
 ## Grammar
 
-program: function
-function: FUNCTION ( var_list ) { summary stmt_list RETURN ( var_list ) }
-summary: SUMMARY
-var_list: VAR var_list
-var_list:
-stmt_list: stmt stmt_list
-stmt_list:
-value: VAR
-value: NUMBER
-condn: value comparison_op value
-condn: value
-stmt: VAR = value
-stmt: VAR = value comparison_op value
-stmt: VAR = value arithmatic_op value
-stmt: WHILE ( condn ) { stmt_list }
-stmt: IF ( condn ) { stmt_list }
-stmt: IF ( condn ) { stmt_list } ELSE { stmt_list }
-comparison_op: < | > | <= | >= | == | !=
-arithmatic_op: + | * | / | - | %
+Platypus uses PLY to write the grammar.
+
+    program: function
+
+    function: FUNCTION ( var_list ) { summary stmt_list RETURN ( var_list ) }
+
+    summary: SUMMARY
+
+    var_list: VAR var_list
+
+    var_list:
+
+    stmt_list: stmt stmt_list
+
+    stmt_list:
+
+    value: VAR
+
+    value: NUMBER
+
+    condn: value comparison_op value
+
+    condn: value
+
+    stmt: VAR = value
+
+    stmt: VAR = value comparison_op value
+
+    stmt: VAR = value arithmatic_op value
+
+    stmt: WHILE ( condn ) { stmt_list }
+
+    stmt: IF ( condn ) { stmt_list }
+
+    stmt: IF ( condn ) { stmt_list } ELSE { stmt_list }
+
+    comparison_op: < | > | <= | >= | == | !=
+
+    arithmatic_op: + | * | / | - | %
 
 ## Installation
 
