@@ -137,9 +137,7 @@ Platypus can also be used to return multiple values. Save the following program 
 
 ```C
 function (a1 a2 N) {
-# a1, a2 = first and second fibonacci numbers. 
-This function returns the Nth fibonacci number and 
-the sum of the first N fibonacci numbers #
+# returns the Nth fibonacci number & the sum of first N fibonacci numbers#
 
     if (N == 1) {
         fibo = a1
