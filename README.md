@@ -168,13 +168,13 @@ return (fibo sum)
 }
 ```
 
-Running this program,
+Running this program with `a1 = 1`, `a1 = 2` & `N = 8`
             
 ```
 platypus $ 1 1 8
 ```
 
-should output
+This should output
 
 ```
 [21, 54]
